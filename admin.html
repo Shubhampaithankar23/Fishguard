@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - User List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h2>👑 Admin Panel</h2>
+    <p class="welcome">All registered users:</p>
+    
+    <table class="user-table" id="userTable">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

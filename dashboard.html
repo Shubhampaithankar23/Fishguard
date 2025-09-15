@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Phishing Link Identifier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-bg">
+  <!-- Top-right logout button -->
+  <button class="logout-btn-top" onclick="logout()">Logout</button>
+
+  <div class="dashboard-container modern-glass">
+    <h2>🔗 Phishing Link Identifier</h2>
+    <p class="welcome">Welcome! Paste a link below to check if it’s safe or suspicious.</p>
+    
+    <!-- URL Checker -->
+    <div class="checker-box">
+      <input type="url" id="urlInput" placeholder="Enter a URL (https://...)" required />
+      <button class="btn" onclick="checkLink()">Check</button>
+    </div>
+
+    <div class="score-box">
+      <span id="scoreLabel">Phishing Confidence: 0%</span>
+      <div class="score-bar">
+        <div id="scoreFill"></div>
+      </div>
+    </div>
+
+    <p id="result" class="result"></p>
+
+    <!-- Recent URLs Section -->
+    <div class="history-section">
+      <h3>🕒 Recent URLs Checked</h3>
+      <ul id="historyList" class="history-list"></ul>
+    </div>
+
+    <!-- Awareness Section -->
+    <div class="awareness-section">
+      <h3>📢 Security Awareness</h3>
+      <div class="awareness-cards">
+        <div class="card">
+          <h4>🔒 Check HTTPS</h4>
+          <p>Always make sure websites use <b>HTTPS</b>. Avoid entering details on sites without a lock icon.</p>
+        </div>
+        <div class="card">
+          <h4>⚠️ Suspicious Links</h4>
+          <p>Be careful with links containing words like <b>login</b>, <b>verify</b>, or <b>free</b> in the URL.</p>
+        </div>
+        <div class="card">
+          <h4>📱 Mobile Scams</h4>
+          <p>Avoid installing apps from unknown sources or links in SMS/WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
+
